@@ -106,13 +106,13 @@ public class Main {
         System.out.println("        Letra curso             : ");
         String letraCurso           = lector.nextLine();
 
-        // Creamos un objeto de la clase "Alumno" con los valores que ingresa el usuario
-        Alumno nuevoAlumno = new Alumno(nombre              , apellido          , edad              , rut                   ,
-                                        matricula           , sexo              , direccion         , ciudad                ,
-                                        email               , nacionalidad      , viveCon           , gestionadoPor         ,
-                                        etnia               , insOrigen         , ultCurso          , repitente             ,
-                                        enfermedades        , medicamentos      , fechaDeNacimiento , telefono              ,
-                                        curso               , letraCurso);
+            // Creamos un objeto de la clase "Alumno" con los valores que ingresa el usuario
+        Alumno nuevoAlumno = new Alumno(    nombre              , apellido          , edad              , rut                   ,
+                                            matricula           , sexo              , direccion         , ciudad                ,
+                                            email               , nacionalidad      , viveCon           , gestionadoPor         ,
+                                            etnia               , insOrigen         , ultCurso          , repitente             ,
+                                            enfermedades        , medicamentos      , fechaDeNacimiento , telefono              ,
+                                            curso               , letraCurso);
 
     }
 
@@ -163,10 +163,10 @@ public class Main {
         System.out.println("        Observaciones           : ");
         String observaciones        = lector.nextLine();
 
-        Apoderado nuevoApoderado = new Apoderado(   nombres                , apedillos             , rut                       ,
-                                                    parentescos            , telefono              , email                     ,
-                                                    direccion              , ciudad                , situacionLaboral          ,
-                                                    escoladridad           , observaciones)
+        Apoderado nuevoApoderado = new Apoderado(   nombres                     , apellidos                 , rut                           ,
+                                                    parentesco                  , telefono                  , email                         ,
+                                                    direccion                   , ciudad                    , situacionLaboral              ,
+                                                    escolaridad                 , observaciones);
     }
 
     public static void perfilInstitucion() {
