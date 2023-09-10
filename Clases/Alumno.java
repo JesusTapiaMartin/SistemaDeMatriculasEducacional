@@ -1,7 +1,11 @@
 package Clases;
 
 public class Alumno {
+
     // Atributos
+
+        // Para poder hacer la conexión entre alumno Y SU apoderado
+    private Apoderado nuevoApoderado;
     String  nombres             , apellidos             , edad                  , rut                   ,
             matricula           , sexo                  , direccion             , ciudad                ,
             email               , nacionalidad          , viveCon               , gestionadoPor         ,
@@ -134,6 +138,8 @@ public class Alumno {
         return letraCurso;
     }
 
+    public Apoderado getNuevoApoderado() { return nuevoApoderado; }
+
     //==================== SET ====================
 
     public void setNombres(String nombres) {
@@ -220,7 +226,7 @@ public class Alumno {
         this.curso              = curso;
     }
 
-    public void setLetraCurso(String letraCurso) {
-        this.letraCurso         = letraCurso;
-    }
+    public void setLetraCurso(String letraCurso) { this.letraCurso         = letraCurso; }
+
+    public void setNuevoApoderado(Apoderado nuevoApoderado) { this.nuevoApoderado = nuevoApoderado; }
 }
