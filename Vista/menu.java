@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class menu {
     public static void interfazSME () {
         Scanner lector = new Scanner(System.in);
-        String option;
+        String opcion;
 
         do {
             System.out.println("========================================");
@@ -19,9 +19,9 @@ public class menu {
             System.out.println("        [6] Salir                       ");
             System.out.println("========================================");
             System.out.print  ("            Ingrese su opción  :        ");
-            option = lector.nextLine();
+            opcion = lector.nextLine();
 
-            switch (option){
+            switch (opcion){
                 case "1":
                     break;
 
@@ -44,7 +44,7 @@ public class menu {
                     System.out.println("Ingrese una opción valida");
                         break;
             }
-        } while ( !option.equals("6") );
+        } while ( !opcion.equals("6") );
     }
 }
 
