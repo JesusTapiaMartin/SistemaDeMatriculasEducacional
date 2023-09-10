@@ -34,10 +34,17 @@ public class menu {
 
 
                 case "2":
+                    CSV.mostrarAlumnosCSV();
                     break;
 
-                case "3":
+
+                case "3" :
+                    System.out.println(" ---------- ELIMINAR ALUMNO ---------- ");
+                    System.out.print("              Rut del alumno a eliminar   : ");
+                    String rutAEliminar = lector.next();
+                    CSV.eliminarAlumnoCSV(rutAEliminar);
                     break;
+
 
                 case "4":
                     break;
