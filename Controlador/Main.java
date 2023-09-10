@@ -3,6 +3,7 @@ package Controlador;
 
 import java.util.Scanner;
 import Clases.Alumno;
+import Clases.Apoderado;
 
 public class Main {
 
@@ -105,6 +106,7 @@ public class Main {
         System.out.println("        Letra curso             : ");
         String letraCurso           = lector.nextLine();
 
+        // Creamos un objeto de la clase "Alumno" con los valores que ingresa el usuario
         Alumno nuevoAlumno = new Alumno(nombre              , apellido          , edad              , rut                   ,
                                         matricula           , sexo              , direccion         , ciudad                ,
                                         email               , nacionalidad      , viveCon           , gestionadoPor         ,
@@ -161,28 +163,19 @@ public class Main {
         System.out.println("        Observaciones           : ");
         String observaciones        = lector.nextLine();
 
-        Apoderado nuevoApoderado = new Apoderado(nombres                , apedillos             , rut                       ,
-                                                 parentescos            , telefono              , email                     ,
-                                                 direccion              , ciudad                , situacionLaboral          ,
-                                                 escoladridad           , observaciones)
+        Apoderado nuevoApoderado = new Apoderado(   nombres                , apedillos             , rut                       ,
+                                                    parentescos            , telefono              , email                     ,
+                                                    direccion              , ciudad                , situacionLaboral          ,
+                                                    escoladridad           , observaciones)
     }
 
     public static void perfilInstitucion() {
-
-        System.out.println("---------- Perfil de la Institucion ----------");
-
-        System.out.println("Nombre: Complejo Educacional La Granja de Cajon");
-
-        System.out.println("Direccion: ARTURO PRAT Nº 0181");
-
-        System.out.println("Director: Luis Toro Chávez");
-
-        System.out.println("RBD: 05613-8 ");
-
-        System.out.println("Año escolar: 2023");
-
-        System.out.println("Telefono: 45-2371050");
-
-
+        System.out.println(" ---------- Perfil de la Institucion ---------- ");
+        System.out.println("        Nombre          : Complejo Educacional La Granja de Cajón   ");
+        System.out.println("        Dirección       : ARTURO PRAT Nº 0181                       ");
+        System.out.println("        Director        : Luis Toro Chávez                          ");
+        System.out.println("        RBD             : 05613-8                                   ");
+        System.out.println("        Año escolar     : 2023                                      ");
+        System.out.println("        Teléfono        : 45-2371050                                ");
     }
 }
