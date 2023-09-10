@@ -21,92 +21,92 @@ public class Main {
     public static Alumno agregarAlumno(){
         Scanner lector = new Scanner(System.in);
 
-        System.out.println("        ---------- AGREGAR ALUMNO ---------- ");
-        System.out.print  ("                Nombre                  : ");
+        System.out.println("              ---------- AGREGAR ALUMNO ---------- ");
+        System.out.print  ("                    Nombre                  : ");
         String nombre = lector.nextLine();
 
 
-        System.out.print  ("                Apellidos               : ");
+        System.out.print  ("                    Apellidos               : ");
         String apellido             = lector.nextLine();
 
 
-        System.out.print  ("                Edad                    : ");
+        System.out.print  ("                    Edad                    : ");
         String edad                 = lector.nextLine();
 
 
-        System.out.print  ("                Rut                     : ");
+        System.out.print  ("                    Rut                     : ");
         String rut                  = lector.nextLine();
 
 
-        System.out.print  ("                Matrícula               : ");
+        System.out.print  ("                    Matrícula               : ");
         String matricula            = lector.nextLine();
 
 
-        System.out.print  ("                Sexo                    : ");
+        System.out.print  ("                    Sexo                    : ");
         String sexo                 = lector.nextLine();
 
 
-        System.out.print  ("                Dirección               : ");
+        System.out.print  ("                    Dirección               : ");
         String direccion            = lector.nextLine();
 
 
-        System.out.print  ("                Ciudad                  : ");
+        System.out.print  ("                    Ciudad                  : ");
         String ciudad               = lector.nextLine();
 
 
-        System.out.print  ("                Email                   : ");
+        System.out.print  ("                    Email                   : ");
         String email                = lector.nextLine();
 
 
-        System.out.print  ("                Nacionaliad             : ");
+        System.out.print  ("                    Nacionaliad             : ");
         String nacionalidad         = lector.nextLine();
 
 
-        System.out.print  ("                Vive con                : ");
+        System.out.print  ("                    Vive con                : ");
         String viveCon              = lector.nextLine();
 
 
-        System.out.print  ("                Gestionado por          : ");
+        System.out.print  ("                    Gestionado por          : ");
         String gestionadoPor        = lector.nextLine();
 
 
-        System.out.print  ("                Etnia                   : ");
+        System.out.print  ("                    Etnia                   : ");
         String etnia                = lector.nextLine();
 
 
-        System.out.print  ("                Intitución de origen    : ");
+        System.out.print  ("                    Intitución de origen    : ");
         String insOrigen            = lector.nextLine();
 
 
-        System.out.print  ("                Último curso            : ");
+        System.out.print  ("                    Último curso            : ");
         String ultCurso             = lector.nextLine();
 
 
-        System.out.print  ("                Repitente               : ");
+        System.out.print  ("                    Repitente               : ");
         String repitente            = lector.nextLine();
 
 
-        System.out.print  ("                Enfermedades            : ");
+        System.out.print  ("                    Enfermedades            : ");
         String enfermedades         = lector.nextLine();
 
 
-        System.out.print  ("                Medicamentos            : ");
+        System.out.print  ("                    Medicamentos            : ");
         String medicamentos         = lector.nextLine();
 
 
-        System.out.print  ("                Fecha de nacimiento     : ");
+        System.out.print  ("                    Fecha de nacimiento     : ");
         String fechaDeNacimiento    = lector.nextLine();
 
 
-        System.out.print  ("                Teléfono                : ");
+        System.out.print  ("                    Teléfono                : ");
         String telefono             = lector.nextLine();
 
 
-        System.out.print  ("                Curso                   : ");
+        System.out.print  ("                    Curso                   : ");
         String curso                = lector.nextLine();
 
 
-        System.out.print  ("                Letra curso             : ");
+        System.out.print  ("                    Letra curso             : ");
         String letraCurso           = lector.nextLine();
 
             // Creamos un objeto de la clase "Alumno" con los valores que ingresa el usuario
@@ -124,48 +124,48 @@ public class Main {
         // Le pasamos como parámetro el último alumno creado
     public static void agregarApoderado(Alumno nuevoAlumno){
         Scanner lector = new Scanner(System.in);
-        System.out.println("        ---------- AGREGAR APODERADO ---------- ");
-        System.out.print  ("                Nombres                 : ");
+        System.out.println("              ---------- AGREGAR APODERADO ---------- ");
+        System.out.print  ("                    Nombres                 : ");
         String nombres              = lector.nextLine();
 
 
-        System.out.print  ("                Apedillos               : ");
+        System.out.print  ("                    Apedillos               : ");
         String apellidos            = lector.nextLine();
 
 
-        System.out.print  ("                Rut                     : ");
+        System.out.print  ("                    Rut                     : ");
         String rut                  = lector.nextLine();
 
 
-        System.out.print  ("                Parentesco              : ");
+        System.out.print  ("                    Parentesco              : ");
         String parentesco           = lector.nextLine();
 
 
-        System.out.print  ("                Telefono                : ");
+        System.out.print  ("                    Telefono                : ");
         String telefono             = lector.nextLine();
 
 
-        System.out.print  ("                Email                   : ");
+        System.out.print  ("                    Email                   : ");
         String email                = lector.nextLine();
 
 
-        System.out.print  ("                Dirección               : ");
+        System.out.print  ("                    Dirección               : ");
         String direccion            = lector.nextLine();
 
 
-        System.out.print  ("                Ciudad                  : ");
+        System.out.print  ("                    Ciudad                  : ");
         String ciudad               = lector.nextLine();
 
 
-        System.out.print  ("                Situación laboral       : ");
+        System.out.print  ("                    Situación laboral       : ");
         String situacionLaboral     = lector.nextLine();
 
 
-        System.out.print  ("                Escolaridad             : ");
+        System.out.print  ("                    Escolaridad             : ");
         String escolaridad          = lector.nextLine();
 
 
-        System.out.print  ("                Observaciones           : ");
+        System.out.print  ("                    Observaciones           : ");
         String observaciones        = lector.nextLine();
 
         Apoderado nuevoApoderado = new Apoderado(   nombres                     , apellidos                 , rut                           ,
@@ -180,12 +180,12 @@ public class Main {
     }
 
     public static void perfilInstitucion() {
-        System.out.println(" ---------- Perfil de la Institucion ---------- ");
-        System.out.println("        Nombre          : Complejo Educacional La Granja de Cajón   ");
-        System.out.println("        Dirección       : ARTURO PRAT Nº 0181                       ");
-        System.out.println("        Director        : Luis Toro Chávez                          ");
-        System.out.println("        RBD             : 05613-8                                   ");
-        System.out.println("        Año escolar     : 2023                                      ");
-        System.out.println("        Teléfono        : 45-2371050                                ");
+        System.out.println("              ---------- Perfil de la Institucion ---------- ");
+        System.out.println("                    Nombre          : Complejo Educacional La Granja de Cajón   ");
+        System.out.println("                    Dirección       : ARTURO PRAT Nº 0181                       ");
+        System.out.println("                    Director        : Manuel Valdés                             ");
+        System.out.println("                    RBD             : 05613-8                                   ");
+        System.out.println("                    Año escolar     : 2023                                      ");
+        System.out.println("                    Teléfono        : 45-2371050                                ");
     }
 }
