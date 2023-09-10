@@ -21,7 +21,7 @@ public class menu {
             System.out.println("        [5] Perfil institución          ");
             System.out.println("        [6] Salir                       ");
             System.out.println("========================================");
-            System.out.print  ("            Ingrese su opción  :        ");
+            System.out.print  ("            Ingrese su opción  : ");
             opcion = lector.nextLine();
             System.out.println("========================================");
 
@@ -50,8 +50,9 @@ public class menu {
                     break;
 
                 case "5":
-                    System.out.println("              ---------- PERFIL INSTITUCIÓN ----------");
                     Main.perfilInstitucion();
+                    System.out.println("              ----------------------------------------------\n");
+
                     break;
 
 
