@@ -166,4 +166,23 @@ public class Main {
                                                  direccion              , ciudad                , situacionLaboral          ,
                                                  escoladridad           , observaciones)
     }
+
+    public static void perfilInstitucion() {
+
+        System.out.println("---------- Perfil de la Institucion ----------");
+
+        System.out.println("Nombre: Complejo Educacional La Granja de Cajon");
+
+        System.out.println("Direccion: ARTURO PRAT Nº 0181");
+
+        System.out.println("Director: Luis Toro Chávez");
+
+        System.out.println("RBD: 05613-8 ");
+
+        System.out.println("Año escolar: 2023");
+
+        System.out.println("Telefono: 45-2371050");
+
+
+    }
 }
