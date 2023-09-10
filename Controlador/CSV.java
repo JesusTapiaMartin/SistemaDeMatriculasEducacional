@@ -131,7 +131,7 @@ public class CSV {
                     continue;
                 }
 
-                String[] campos = linea.split(" , ");
+                String[] campos = linea.split(",");
 
                 if (campos.length >= 24){
                     String rutAlumno            = campos[2].trim();

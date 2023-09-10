@@ -4,7 +4,7 @@ package Controlador;
 import java.util.Scanner;
 import Clases.Alumno;
 import Clases.Apoderado;
-import Vista.Menu;
+import Vista.menu;
 
 
 public class Main {
