@@ -2,40 +2,49 @@ package Clases;
 
 public class Alumno {
     // Atributos
-    String nombres, apellidos, edad, rut, matricula, sexo, direccion, ciudad, email, nacionalidad, viveCon, gestionadoPor, etnia, insOrigen, ultCurso, repitente,
-    enfermedades, medicamentos, fechaDeNacimiento, telefono, curso, letraCurso;
+    String  nombres             , apellidos             , edad                  , rut                   ,
+            matricula           , sexo                  , direccion             , ciudad                ,
+            email               , nacionalidad          , viveCon               , gestionadoPor         ,
+            etnia               , insOrigen             , ultCurso              , repitente             ,
+            enfermedades        , medicamentos          , fechaDeNacimiento     , telefono              ,
+            curso               , letraCurso;
 
-    // Constructor
+    //==================== Constructor ====================
 
-    public Alumno(String nombres, String apellidos, String edad, String rut, String matricula, String sexo, String direccion, String ciudad, String email, String nacionalidad, String viveCon, String gestionadoPor, String etnia, String insOrigen, String ultCurso, String repitente, String enfermedades, String medicamentos, String fechaDeNacimiento, String telefono, String curso, String letraCurso) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.edad = edad;
-        this.rut = rut;
-        this.matricula = matricula;
-        this.sexo = sexo;
-        this.direccion = direccion;
-        this.ciudad = ciudad;
-        this.email = email;
-        this.nacionalidad = nacionalidad;
-        this.viveCon = viveCon;
-        this.gestionadoPor = gestionadoPor;
-        this.etnia = etnia;
-        this.insOrigen = insOrigen;
-        this.ultCurso = ultCurso;
-        this.repitente = repitente;
-        this.enfermedades = enfermedades;
-        this.medicamentos = medicamentos;
-        this.fechaDeNacimiento = fechaDeNacimiento;
-        this.telefono = telefono;
-        this.curso = curso;
-        this.letraCurso = letraCurso;
+    public Alumno(  String nombres          , String apellidos          , String edad               , String rut                ,
+                    String matricula        , String sexo               , String direccion          , String ciudad             ,
+                    String email            , String nacionalidad       , String viveCon            , String gestionadoPor      ,
+                    String etnia            , String insOrigen          , String ultCurso           , String repitente          ,
+                    String enfermedades     , String medicamentos       , String fechaDeNacimiento  , String telefono           ,
+                    String curso            , String letraCurso) {
+        this.nombres                = nombres;
+        this.apellidos              = apellidos;
+        this.edad                   = edad;
+        this.rut                    = rut;
+        this.matricula              = matricula;
+        this.sexo                   = sexo;
+        this.direccion              = direccion;
+        this.ciudad                 = ciudad;
+        this.email                  = email;
+        this.nacionalidad           = nacionalidad;
+        this.viveCon                = viveCon;
+        this.gestionadoPor          = gestionadoPor;
+        this.etnia                  = etnia;
+        this.insOrigen              = insOrigen;
+        this.ultCurso               = ultCurso;
+        this.repitente              = repitente;
+        this.enfermedades           = enfermedades;
+        this.medicamentos           = medicamentos;
+        this.fechaDeNacimiento      = fechaDeNacimiento;
+        this.telefono               = telefono;
+        this.curso                  = curso;
+        this.letraCurso             = letraCurso;
     }
 
     public Alumno() {
     }
 
-    // Get
+    //==================== GET ====================
 
     public String getNombres() {
         return nombres;
@@ -125,7 +134,7 @@ public class Alumno {
         return letraCurso;
     }
 
-    // Sett
+    //==================== SET ====================
 
     public void setNombres(String nombres) {
         this.nombres = nombres;

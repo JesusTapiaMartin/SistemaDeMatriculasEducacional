@@ -1,26 +1,31 @@
+
 package Clases;
 
 public class Apoderado {
-    String nombres, apellidos, rut, parentesco, telefono, email, direccion, ciudad, situacionLaboral, escolaridad, observaciones;
+    String  nombres             , apellidos                 , rut                   , parentesco                ,
+            telefono            , email                     , direccion             , ciudad                    ,
+            situacionLaboral    , escolaridad               , observaciones;
 
-    //Constructor
+    //==================== CONSTRUCTORES ====================
 
+    public Apoderado(   String nombres              , String apellidos          , String rut                , String parentesco     ,
+                        String telefono             , String email              , String direccion          , String ciudad         ,
+                        String situacionLaboral     , String escolaridad        , String observaciones) {
 
-    public Apoderado(String nombres, String apellidos, String rut, String parentesco, String telefono, String email, String direccion, String ciudad, String situacionLaboral, String escolaridad, String observaciones) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.rut = rut;
-        this.parentesco = parentesco;
-        this.telefono = telefono;
-        this.email = email;
-        this.direccion = direccion;
-        this.ciudad = ciudad;
-        this.situacionLaboral = situacionLaboral;
-        this.escolaridad = escolaridad;
-        this.observaciones = observaciones;
+        this.nombres            = nombres;
+        this.apellidos          = apellidos;
+        this.rut                = rut;
+        this.parentesco         = parentesco;
+        this.telefono           = telefono;
+        this.email              = email;
+        this.direccion          = direccion;
+        this.ciudad             = ciudad;
+        this.situacionLaboral   = situacionLaboral;
+        this.escolaridad        = escolaridad;
+        this.observaciones      = observaciones;
     }
 
-    //Gett
+    //==================== GET ====================
 
     public String getNombres() {
         return nombres;
@@ -67,50 +72,50 @@ public class Apoderado {
     }
 
 
-    //Sett
+    //==================== SET ====================
 
     public void setNombres(String nombres) {
-        this.nombres = nombres;
+        this.nombres            = nombres;
     }
 
     public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+        this.apellidos          = apellidos;
     }
 
     public void setRut(String rut) {
-        this.rut = rut;
+        this.rut                = rut;
     }
 
     public void setParentesco(String parentesco) {
-        this.parentesco = parentesco;
+        this.parentesco         = parentesco;
     }
 
     public void setTelefono(String telefono) {
-        this.telefono = telefono;
+        this.telefono           = telefono;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email              = email;
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+        this.direccion          = direccion;
     }
 
     public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+        this.ciudad             = ciudad;
     }
 
     public void setSituacionLaboral(String situacionLaboral) {
-        this.situacionLaboral = situacionLaboral;
+        this.situacionLaboral   = situacionLaboral;
     }
 
     public void setEscolaridad(String escolaridad) {
-        this.escolaridad = escolaridad;
+        this.escolaridad        = escolaridad;
     }
 
     public void setObservaciones(String observaciones) {
-        this.observaciones = observaciones;
+        this.observaciones      = observaciones;
     }
 
 }
