@@ -161,7 +161,7 @@ public class CSV {
 
 
     //==================== ELIMINAR ALUMNO CSV ====================
-    public static void eliminarAlumnoCSV(rutEstudiante){
+    public static void eliminarAlumnoCSV(String rutEstudiante){
         try{
             File archivo                = new File(nombreArchivo);
             Scanner lector              = new Scanner(System.in);
