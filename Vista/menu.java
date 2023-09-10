@@ -39,8 +39,8 @@ public class menu {
 
 
                 case "3" :
-                    System.out.println(" ---------- ELIMINAR ALUMNO ---------- ");
-                    System.out.print("              Rut del alumno a eliminar   : ");
+                    System.out.println("              ---------- ELIMINAR ALUMNO ---------- ");
+                    System.out.print("                      Rut del alumno a eliminar   : ");
                     String rutAEliminar = lector.next();
                     CSV.eliminarAlumnoCSV(rutAEliminar);
                     break;
@@ -50,7 +50,7 @@ public class menu {
                     break;
 
                 case "5":
-                    System.out.println("                    ---------- PERFIL INSTITUCIÓN ----------");
+                    System.out.println("              ---------- PERFIL INSTITUCIÓN ----------");
                     Main.perfilInstitucion();
                     break;
 
