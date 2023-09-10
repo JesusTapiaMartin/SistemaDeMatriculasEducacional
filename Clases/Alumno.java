@@ -137,90 +137,90 @@ public class Alumno {
     //==================== SET ====================
 
     public void setNombres(String nombres) {
-        this.nombres = nombres;
+        this.nombres            = nombres;
     }
 
     public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+        this.apellidos          = apellidos;
     }
 
     public void setEdad(String edad) {
-        this.edad = edad;
+        this.edad               = edad;
     }
 
     public void setRut(String rut) {
-        this.rut = rut;
+        this.rut                = rut;
     }
 
     public void setMatricula(String matricula) {
-        this.matricula = matricula;
+        this.matricula          = matricula;
     }
 
     public void setSexo(String sexo) {
-        this.sexo = sexo;
+        this.sexo               = sexo;
     }
 
     public void setDireccion(String direccion) {
-        this.direccion = direccion;
+        this.direccion          = direccion;
     }
 
     public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+        this.ciudad             = ciudad;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email              = email;
     }
 
     public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
+        this.nacionalidad       = nacionalidad;
     }
 
     public void setViveCon(String viveCon) {
-        this.viveCon = viveCon;
+        this.viveCon            = viveCon;
     }
 
     public void setGestionadoPor(String gestionadoPor) {
-        this.gestionadoPor = gestionadoPor;
+        this.gestionadoPor      = gestionadoPor;
     }
 
     public void setEtnia(String etnia) {
-        this.etnia = etnia;
+        this.etnia              = etnia;
     }
 
     public void setInsOrigen(String insOrigen) {
-        this.insOrigen = insOrigen;
+        this.insOrigen          = insOrigen;
     }
 
     public void setUltCurso(String ultCurso) {
-        this.ultCurso = ultCurso;
+        this.ultCurso           = ultCurso;
     }
 
     public void setRepitente(String repitente) {
-        this.repitente = repitente;
+        this.repitente          = repitente;
     }
 
     public void setEnfermedades(String enfermedades) {
-        this.enfermedades = enfermedades;
+        this.enfermedades       = enfermedades;
     }
 
     public void setMedicamentos(String medicamentos) {
-        this.medicamentos = medicamentos;
+        this.medicamentos       = medicamentos;
     }
 
     public void setFechaDeNacimiento(String fechaDeNacimiento) {
-        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.fechaDeNacimiento  = fechaDeNacimiento;
     }
 
     public void setTelefono(String telefono) {
-        this.telefono = telefono;
+        this.telefono           = telefono;
     }
 
     public void setCurso(String curso) {
-        this.curso = curso;
+        this.curso              = curso;
     }
 
     public void setLetraCurso(String letraCurso) {
-        this.letraCurso = letraCurso;
+        this.letraCurso         = letraCurso;
     }
 }
