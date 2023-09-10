@@ -113,4 +113,57 @@ public class Main {
                                         curso               , letraCurso);
 
     }
+
+    //==================== AGREGAR ALUMNO ====================
+    public static void agregarApoderado(){
+        Scanner lector = new Scanner(System.in);
+        System.out.println(" ---------- AGREGAR APODERADO ---------- ");
+        System.out.println("        Nombres                 : ");
+        String nombres              = lector.nextLine();
+
+
+        System.out.println("        Apedillos               : ");
+        String apellidos            = lector.nextLine();
+
+
+        System.out.println("        Rut                     : ");
+        String rut                  = lector.nextLine();
+
+
+        System.out.println("        Parentesco              : ");
+        String parentesco           = lector.nextLine();
+
+
+        System.out.println("        Telefono                : ");
+        String telefono             = lector.nextLine();
+
+
+        System.out.println("        Email                   : ");
+        String email                = lector.nextLine();
+
+
+        System.out.println("        Dirección               : ");
+        String direccion            = lector.nextLine();
+
+
+        System.out.println("        Ciudad                  : ");
+        String ciudad               = lector.nextLine();
+
+
+        System.out.println("        Situación laboral       : ");
+        String situacionLaboral     = lector.nextLine();
+
+
+        System.out.println("        Escolaridad             : ");
+        String escolaridad          = lector.nextLine();
+
+
+        System.out.println("        Observaciones           : ");
+        String observaciones        = lector.nextLine();
+
+        Apoderado nuevoApoderado = new Apoderado(nombres                , apedillos             , rut                       ,
+                                                 parentescos            , telefono              , email                     ,
+                                                 direccion              , ciudad                , situacionLaboral          ,
+                                                 escoladridad           , observaciones)
+    }
 }
