@@ -1,6 +1,7 @@
 package Controlador;
 
 import Clases.Alumno;
+import Clases.Apoderado;
 import java.io.*;
 
 public class CSV {
@@ -66,7 +67,7 @@ public class CSV {
 
 
             // Apoderado
-            Apoderado apoderado = alumno.getNuevoApoderado();
+            Apoderado apoderado = nuevoAlumno.getNuevoApoderado();
             String nombresApoderado             = apoderado.getNombres();
             String apellidosApoderado           = apoderado.getApellidos();
             String rutApoderado                 = apoderado.getRut();
@@ -74,7 +75,6 @@ public class CSV {
             String telefonoApoderado            = apoderado.getTelefono();
             String emailApoderado               = apoderado.getEmail();
             String direccionApoderado           = apoderado.getDireccion();
-            String villaApoderado               = apoderado.getVilla();
             String ciudadApoderado              = apoderado.getCiudad();
             String situacionLaboralApoderado    = apoderado.getSituacionLaboral();
             String escolaridadApoderado         = apoderado.getEscolaridad();
@@ -86,15 +86,15 @@ public class CSV {
             BufferedWriter escritor = new BufferedWriter(new FileWriter(nombreArchivo, true));
 
                 // Para escribir los datos del alumno y su apoderado
-            escritor.write( nombresAlumno           + "," + apellidosAlumno             + "," + rutAlumno               + "," + matriculaAlumno             + "," +
-                            sexoAlumno              + "," + direccionAlumno             + "," + ciudadAlumno            + "," + emailAlumno                 + "," +
-                            nacionalidadAlumno      + "," + viveConAlumno               + "," + gestionadoPorAlumno     + "," + etniaAlumno                 + "," +
-                            insOrigenAlumno         + "," + ultCursoAlumno              + "," + repitenteAlumno         + "," + enfermedadesAlumno          + "," +
-                            medicamentosAlumno      + "," + fechaDeNacimientoAlumno     + "," + telefonoAlumno          + "," + edadAlumno                  + "," +
-                            cursoAlumno             + "," + letraCursoAlumno            + "," + nombresApoderado        + "," + apellidosApoderado          + "," +
-                            rutApoderado            + "," + parentescoApoderado         + "," + telefonoApoderado       + "," + emailApoderado              + "," +
-                            direccionApoderado      + "," + villaApoderado              + "," + ciudadApoderado         + "," + situacionLaboralApoderado   + "," +
-                            escolaridadApoderado    + "," + observacionesApoderado      );
+            escritor.write( nombresAlumno           + "," + apellidosAlumno             + "," + rutAlumno                   + "," + matriculaAlumno             + "," +
+                            sexoAlumno              + "," + direccionAlumno             + "," + ciudadAlumno                + "," + emailAlumno                 + "," +
+                            nacionalidadAlumno      + "," + viveConAlumno               + "," + gestionadoPorAlumno         + "," + etniaAlumno                 + "," +
+                            insOrigenAlumno         + "," + ultCursoAlumno              + "," + repitenteAlumno             + "," + enfermedadesAlumno          + "," +
+                            medicamentosAlumno      + "," + fechaDeNacimientoAlumno     + "," + telefonoAlumno              + "," + edadAlumno                  + "," +
+                            cursoAlumno             + "," + letraCursoAlumno            + "," + nombresApoderado            + "," + apellidosApoderado          + "," +
+                            rutApoderado            + "," + parentescoApoderado         + "," + telefonoApoderado           + "," + emailApoderado              + "," +
+                            direccionApoderado      + "," + ciudadApoderado             + "," + situacionLaboralApoderado   + "," + escolaridadApoderado        + "," +
+                            observacionesApoderado      );
 
 
                 // Para agregar una nueva línea, cada vez que agregemos un alumno
