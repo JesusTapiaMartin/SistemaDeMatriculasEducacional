@@ -1,5 +1,8 @@
 package Vista;
 import java.util.Scanner;
+import Clases.Alumno;
+import Controlador.Main;
+import Controlador.CSV;
 
 public class menu {
     public static void interfazSME () {
@@ -24,7 +27,11 @@ public class menu {
 
             switch (opcion){
                 case "1":
+                    Alumno nuevoAlumno = Main.agregarAlumno();
+                    Main.agregarApoderado(nuevoAlumno);
+                    CSV.agregarAlumnoCSV(nuevoAlumno);
                     break;
+
 
                 case "2":
                     break;
@@ -36,7 +43,10 @@ public class menu {
                     break;
 
                 case "5":
+                    System.out.println("                    ---------- PERFIL INSTITUCIÓN ----------");
+                    Main.perfilInstitucion();
                     break;
+
 
                 case "6":
                     System.out.println("        Hasta luego... ");
