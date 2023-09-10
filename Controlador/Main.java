@@ -114,7 +114,7 @@ public class Main {
 
     }
 
-    //==================== AGREGAR ALUMNO ====================
+    //==================== AGREGAR APODERADO ====================
     public static void agregarApoderado(){
         Scanner lector = new Scanner(System.in);
         System.out.println(" ---------- AGREGAR APODERADO ---------- ");
