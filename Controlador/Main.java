@@ -15,7 +15,7 @@ public class Main {
 
 
     //==================== AGREGAR ALUMNO ====================
-    public static void agregarAlumno(){
+    public static Alumno agregarAlumno(){
         Scanner lector = new Scanner(System.in);
 
         System.out.println(" ---------- AGREGAR ALUMNO ---------- ");
@@ -114,10 +114,12 @@ public class Main {
                                             enfermedades        , medicamentos      , fechaDeNacimiento , telefono              ,
                                             curso               , letraCurso);
 
+        return nuevoAlumno;
     }
 
     //==================== AGREGAR APODERADO ====================
-    public static void agregarApoderado(){
+        // Le pasamos como parámetro el último alumno creado
+    public static void agregarApoderado(Alumno nuevoAlumno){
         Scanner lector = new Scanner(System.in);
         System.out.println(" ---------- AGREGAR APODERADO ---------- ");
         System.out.println("        Nombres                 : ");
@@ -167,6 +169,11 @@ public class Main {
                                                     parentesco                  , telefono                  , email                         ,
                                                     direccion                   , ciudad                    , situacionLaboral              ,
                                                     escolaridad                 , observaciones);
+
+            // Al alumno que acabamos de crear le asignamos un apoderado
+            // Esto con un "setNuevoApoderado" usando como parámetro el atributo "nuevoApoderado" de la clase Alumno
+        nuevoAlumno.setNuevoApoderado(nuevoApoderado);
+
     }
 
     public static void perfilInstitucion() {
