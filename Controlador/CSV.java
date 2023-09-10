@@ -103,11 +103,11 @@ public class CSV {
 
             escritor.close();
 
-            System.out.println("  El alumno y su apoderado registrados correctamente en \' Matrículas.csv\' ");
+            System.out.println("    El alumno y su apoderado registrados correctamente en \' Matrículas.csv\' ");
 
 
         } catch(IOException e){
-            System.out.println(" Error al registrar " + e.getMessage());
+            System.out.println("    Error al registrar " + e.getMessage());
 
         }
     }
@@ -153,7 +153,7 @@ public class CSV {
             lector.close();
 
         } catch(IOException e){
-            System.err.println(" Hubo un error al leer el archivo   : " + e.getMessage());
+            System.err.println("    Hubo un error al leer el archivo   : " + e.getMessage());
 
         }
     }
@@ -164,7 +164,7 @@ public class CSV {
     public static void eliminarAlumnoCSV(String rutEstudiante){
         try{
             File archivo                = new File(nombreArchivo);
-            Scanner lector              = new Scanner(System.in);
+            Scanner lector              = new Scanner(archivo);
             BufferedWriter escritor     = new BufferedWriter(new FileWriter(nombreArchivo + ".temp"));
 
             while (lector.hasNextLine()){
@@ -185,10 +185,10 @@ public class CSV {
             File archivoTemp = new File(nombreArchivo+ ".temp");
             archivoTemp.renameTo(archivo);
 
-            System.out.println(" El estudiante de rut " + rutEstudiante + " fue eliminado correctamente ");
+            System.out.println("    El estudiante de rut " + rutEstudiante + " fue eliminado correctamente ");
 
         } catch(IOException e){
-            System.err.println(" Hubo un error al eliminar el estudiante    : " + e.getMessage());
+            System.err.println("    Hubo un error al eliminar el estudiante    : " + e.getMessage());
         }
 
     }
