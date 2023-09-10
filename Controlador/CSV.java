@@ -3,6 +3,7 @@ package Controlador;
 import Clases.Alumno;
 import Clases.Apoderado;
 import java.io.*;
+import java.util.Scanner;
 
 public class CSV {
 
@@ -109,5 +110,86 @@ public class CSV {
             System.out.println(" Error al registrar " + e.getMessage());
 
         }
+    }
+
+
+
+    //==================== MOSTRAR ALUMNOS CSV ====================
+    public static void mostrarAlumnosCSV(){
+        try{
+            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
+            String linea;
+
+            System.out.println              ("              --------- ALUMNOS ---------- ");
+
+            boolean primeraLinea = true;
+
+            while((linea = lector.readLine()) != null){
+                // Esto para saltar la prímera línea de encabezados, ya que estos van de más
+                if(primeraLinea){
+                    primeraLinea = false;
+                    continue;
+                }
+
+                String[] campos = linea.split(" , ");
+
+                if (campos.length >= 24){
+                    String rutAlumno            = campos[2].trim();
+                    String nombresAlumno        = campos[0].trim();
+                    String apellidosAlumno      = campos[1].trim();
+                    String nombresApoderado     = campos[23].trim();
+                    String apellidosApoderado   = campos[24].trim();
+                    String cursoAlumno          = campos[21].trim();
+                    String letraCursoAlumno     = campos[22].trim();
+
+                    System.out.println      ("                  Rut alumno : " + rutAlumno);
+                    System.out.println      ("                  Alumno     : " + nombresAlumno     + " " + apellidosAlumno     );
+                    System.out.println      ("                  Apoderado  : " + nombresApoderado  + " " + apellidosApoderado  );
+                    System.out.println      ("                  Curso      : " + cursoAlumno       + " " + letraCursoAlumno    );
+                    System.out.println      ("              ----------------------------");
+                }
+            }
+
+            lector.close();
+
+        } catch(IOException e){
+            System.err.println(" Hubo un error al leer el archivo   : " + e.getMessage());
+
+        }
+    }
+
+
+
+    //==================== ELIMINAR ALUMNO CSV ====================
+    public static void eliminarAlumnoCSV(rutEstudiante){
+        try{
+            File archivo                = new File(nombreArchivo);
+            Scanner lector              = new Scanner(System.in);
+            BufferedWriter escritor     = new BufferedWriter(new FileWriter(nombreArchivo + ".temp"));
+
+            while (lector.hasNextLine()){
+                String linea = lector.nextLine();
+
+                if(!linea.contains("," + rutEstudiante + ",")){
+                    escritor.write(linea);
+                    escritor.newLine();
+
+                }
+            }
+
+            lector.close();
+            escritor.close();
+
+            archivo.delete();
+
+            File archivoTemp = new File(nombreArchivo+ ".temp");
+            archivoTemp.renameTo(archivo);
+
+            System.out.println(" El estudiante de rut " + rutEstudiante + " fue eliminado correctamente ");
+
+        } catch(IOException e){
+            System.err.println(" Hubo un error al eliminar el estudiante    : " + e.getMessage());
+        }
+
     }
 }
