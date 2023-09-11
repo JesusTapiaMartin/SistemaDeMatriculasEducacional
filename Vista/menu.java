@@ -95,7 +95,7 @@ public class menu {
                 case "5":
                     Main.perfilInstitucion();
                     System.out.println("              ----------------------------------------------\n");
-                    break;;
+                    break;
 
 
 
