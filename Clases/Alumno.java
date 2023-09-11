@@ -4,6 +4,7 @@ public class Alumno {
 
     // Atributos
 
+
         // Para poder hacer la conexión entre alumno Y SU apoderado
     private Apoderado nuevoApoderado;
     String  nombres             , apellidos             , edad                  , rut                   ,
