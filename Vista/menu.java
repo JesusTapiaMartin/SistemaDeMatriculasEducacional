@@ -33,9 +33,40 @@ public class menu {
                     break;
 
 
+
                 case "2":
                     CSV.mostrarAlumnosCSV();
+
+                    boolean continuarBusqueda = true;
+
+                    do {
+                        System.out.println("              =======================================");
+                        System.out.println("              [1] Buscar detalles de alumno por RUT  ");
+                        System.out.println("              [2] Salir                              ");
+                        System.out.print  ("                    Ingrese una opción     : ");
+                        String opcionBusqueda       = lector.nextLine();
+                        System.out.println("              =======================================\n");
+
+                        switch (opcionBusqueda) {
+                            case "1":
+                                System.out.println("                    ---------- BUSCAR ALUMNO POR RUT ---------- ");
+                                System.out.print  ("                            Rut del alumno  : ");
+                                String rutBusqueda  = lector.nextLine();
+                                System.out.println(" ");
+                                CSV.mostrarAlumnoPorRut(rutBusqueda);
+                                break;
+
+                            case "2":
+                                // Termina la búsqueda y volver al menú principal
+                                continuarBusqueda = false;
+                                break;
+
+                            default:
+                                System.out.println("              Ingrese una opción válida...\n");
+                        }
+                    } while (continuarBusqueda);
                     break;
+
 
 
                 case "3" :
@@ -46,8 +77,12 @@ public class menu {
                     break;
 
 
+
                 case "4":
                     break;
+
+
+
 
                 case "5":
                     Main.perfilInstitucion();
@@ -56,8 +91,11 @@ public class menu {
                     break;
 
 
+
                 case "6":
                     System.out.println("        Hasta luego... ");
+
+
 
                 default:
                     System.out.println("        Ingrese una opción válida... ");
