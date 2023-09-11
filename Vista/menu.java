@@ -1,4 +1,5 @@
 package Vista;
+
 import java.util.Scanner;
 import Clases.Alumno;
 import Controlador.Main;
@@ -70,7 +71,8 @@ public class menu {
 
 
                 case "3" :
-                    System.out.println("              ---------- ELIMINAR ALUMNO ---------- ");
+                    CSV.mostrarAlumnosCSV();
+                    System.out.println("\n              ---------- ELIMINAR ALUMNO ---------- ");
                     System.out.print("                      Rut del alumno a eliminar   : ");
                     String rutAEliminar = lector.next();
                     CSV.eliminarAlumnoCSV(rutAEliminar);
@@ -79,6 +81,12 @@ public class menu {
 
 
                 case "4":
+                    CSV.mostrarAlumnosCSV();
+                    System.out.println("\n              ---------- MODIFICAR ALUMNO POR RUT ---------- ");
+                    System.out.print("                      Rut del alumno a modificar  : ");
+                    String rutModificar = lector.nextLine();
+                    System.out.println();
+                    CSV.modificarAlumnoPorRut(rutModificar);
                     break;
 
 
@@ -87,8 +95,7 @@ public class menu {
                 case "5":
                     Main.perfilInstitucion();
                     System.out.println("              ----------------------------------------------\n");
-
-                    break;
+                    break;;
 
 
 
