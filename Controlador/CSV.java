@@ -133,7 +133,7 @@ public class CSV {
 
                 String[] campos = linea.split(",");
 
-                if (campos.length >= 24){
+                if (campos.length >= 32){
                     String rutAlumno            = campos[2].trim();
                     String nombresAlumno        = campos[0].trim();
                     String apellidosAlumno      = campos[1].trim();
@@ -159,27 +159,27 @@ public class CSV {
     }
 
 
-
     //==================== MOSTRAR ALUMNOS POR RUT ====================
-    public static void mostrarAlumnoPorRut(String rutBusqueda){
-        try{
-            BufferedReader lector   = new BufferedReader(new FileReader(nombreArchivo));
+    public static void mostrarAlumnoPorRut(String rutBusqueda) {
+        try {
+            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
             String linea;
 
-            System.out.println("              ---------- DATOS DEL ESTUDIANTE Y SU APODERADO ---------- ");
+            boolean encontrado = false;
 
-            boolean encontrado          = false;
+            while ((linea = lector.readLine()) != null) {
+                String[] campos = linea.split(",");
 
-            while((linea                = lector.readLine()) != null){
-                String[] campos         = linea.split(",");
-                if (campos.length       >= 24) {
-                    String rutAlumno    = campos[3].trim();
+                if (campos.length >= 33) {
+                    String rutAlumno = campos[3].trim();
 
                     // Elimina puntos y guiones del RUT para hacer la comparación
-                    rutAlumno           = rutAlumno.replaceAll("[.-]", "");
+                    rutAlumno = rutAlumno.replaceAll("[.-]", "");
 
-                    if (rutAlumno.equals(rutAlumno)) {
-                        encontrado      = true;
+                    // Compara los RUT sin considerar mayúsculas ni minúsculas
+                    if (rutAlumno.equalsIgnoreCase(rutBusqueda)) {
+                        encontrado = true;
+
 
                         String nombresAlumno                = campos[0].trim();
                         String apellidosAlumno              = campos[1].trim();
@@ -215,37 +215,37 @@ public class CSV {
                         String observacionesApoderado       = campos[32].trim();
 
 
-                        System.out.println("                  Rut alumno                    : " + rutAlumno                                     );
-                        System.out.println("                  Alumno                        : " + nombresAlumno     + " " + apellidosAlumno     );
-                        System.out.println("                  Edad                          : " + edadAlumno                                    );
-                        System.out.println("                  Matrícula                     : " + matriculaAlumno                               );
-                        System.out.println("                  Sexo                          : " + sexoAlumno                                    );
-                        System.out.println("                  Dirección                     : " + direccionAlumno                               );
-                        System.out.println("                  Ciudad                        : " + ciudadAlumno                                  );
-                        System.out.println("                  Email                         : " + emailAlumno                                   );
-                        System.out.println("                  Nacionalidad                  : " + nacionalidadAlumno                            );
-                        System.out.println("                  Vive con                      : " + viveConAlumno                                 );
-                        System.out.println("                  Gestionado por                : " + gestionadoPorAlumno                           );
-                        System.out.println("                  Etnia                         : " + etniaAlumno                                   );
-                        System.out.println("                  Institución de origen         : " + insOrigenAlumno                               );
-                        System.out.println("                  Último curso                  : " + ultCursoAlumno                                );
-                        System.out.println("                  Repitente                     : " + repitenteAlumno                               );
-                        System.out.println("                  Enfermedades                  : " + enfermedadesAlumno                            );
-                        System.out.println("                  Medicamentos                  : " + medicamentosAlumno                            );
-                        System.out.println("                  Fecha de nacimiento           : " + fechaDeNacimientoAlumno                       );
-                        System.out.println("                  Teléfono                      : " + telefonoAlumno                                );
-                        System.out.println("                  Curso                         : " + cursoAlumno       + " " + letraCursoAlumno    );
-                        System.out.println("                  Nombres apoderado             : " + nombresApoderado                              );
-                        System.out.println("                  Apellidos apoderado           : " + apellidosApoderado                            );
-                        System.out.println("                  Rut apoderado                 : " + rutApoderado                                  );
-                        System.out.println("                  Parentesco apoderado          : " + parentescoApoderado                           );
-                        System.out.println("                  Teléfono apoderado            : " + telefonoApoderado                             );
-                        System.out.println("                  Email apoderado               : " + emailApoderado                                );
-                        System.out.println("                  Dirección apoderado           : " + direccionApoderado                            );
-                        System.out.println("                  Ciudad apoderado              : " + ciudadApoderado                               );
-                        System.out.println("                  Situación laboral apoderado   : " + situacionLaboralApoderado                     );
-                        System.out.println("                  Escolaridad apoderado         : " + escolaridadApoderado                          );
-                        System.out.println("                  Observaciones apoderado       : " + observacionesApoderado                        );
+                        System.out.println("                  Rut alumno                        : " + rutAlumno                                     );
+                        System.out.println("                  Alumno                            : " + nombresAlumno     + " " + apellidosAlumno     );
+                        System.out.println("                  Edad                              : " + edadAlumno                                    );
+                        System.out.println("                  Matrícula                         : " + matriculaAlumno                               );
+                        System.out.println("                  Sexo                              : " + sexoAlumno                                    );
+                        System.out.println("                  Dirección                         : " + direccionAlumno                               );
+                        System.out.println("                  Ciudad                            : " + ciudadAlumno                                  );
+                        System.out.println("                  Email                             : " + emailAlumno                                   );
+                        System.out.println("                  Nacionalidad                      : " + nacionalidadAlumno                            );
+                        System.out.println("                  Vive con                          : " + viveConAlumno                                 );
+                        System.out.println("                  Gestionado por                    : " + gestionadoPorAlumno                           );
+                        System.out.println("                  Etnia                             : " + etniaAlumno                                   );
+                        System.out.println("                  Institución de origen             : " + insOrigenAlumno                               );
+                        System.out.println("                  Último curso                      : " + ultCursoAlumno                                );
+                        System.out.println("                  Repitente                         : " + repitenteAlumno                               );
+                        System.out.println("                  Enfermedades                      : " + enfermedadesAlumno                            );
+                        System.out.println("                  Medicamentos                      : " + medicamentosAlumno                            );
+                        System.out.println("                  Fecha de nacimiento               : " + fechaDeNacimientoAlumno                       );
+                        System.out.println("                  Teléfono                          : " + telefonoAlumno                                );
+                        System.out.println("                  Curso                             : " + cursoAlumno       + " " + letraCursoAlumno    );
+                        System.out.println("                  Nombres apoderado                 : " + nombresApoderado                              );
+                        System.out.println("                  Apellidos apoderado               : " + apellidosApoderado                            );
+                        System.out.println("                  Rut apoderado                     : " + rutApoderado                                  );
+                        System.out.println("                  Parentesco apoderado              : " + parentescoApoderado                           );
+                        System.out.println("                  Teléfono apoderado                : " + telefonoApoderado                             );
+                        System.out.println("                  Email apoderado                   : " + emailApoderado                                );
+                        System.out.println("                  Dirección apoderado               : " + direccionApoderado                            );
+                        System.out.println("                  Ciudad apoderado                  : " + ciudadApoderado                               );
+                        System.out.println("                  Situación laboral apoderado       : " + situacionLaboralApoderado                     );
+                        System.out.println("                  Escolaridad apoderado             : " + escolaridadApoderado                          );
+                        System.out.println("                  Observaciones apoderado           : " + observacionesApoderado                        );
                         System.out.println("              ----------------------------");
 
                         // Salimos del bucle una vez que se encuentra el estudiante
@@ -297,5 +297,240 @@ public class CSV {
             System.err.println("    Hubo un error al eliminar el estudiante    : " + e.getMessage());
         }
 
+    }
+
+    //==================== MODIFICAR ALUMNO POR RUT ====================
+    public static void modificarAlumnoPorRut(String rutBusqueda) {
+        try {
+            File archivo                = new File(nombreArchivo);
+            BufferedReader lector       = new BufferedReader(new FileReader(archivo));
+            BufferedWriter escritor     = new BufferedWriter(new FileWriter(nombreArchivo + ".temp"));
+
+            String linea;
+
+            boolean encontrado          = false;
+
+            while ((linea               = lector.readLine()) != null) {
+                String[] campos         = linea.split(",");
+
+                if (campos.length       >= 24) {
+                    String rutAlumno    = campos[3].trim();
+
+                    // Elimina puntos y guiones del RUT para hacer la comparación
+                    rutAlumno = rutAlumno.replaceAll("[.-]", "");
+
+                    if (rutAlumno.equals(rutBusqueda)) {
+                        encontrado = true;
+
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.println("Datos actuales del alumno:");
+                        System.out.println("                  Nombre                            : " + campos[0].trim());
+                        System.out.println("                  Apellidos                         : " + campos[1].trim());
+                        System.out.println("                  Edad                              : " + campos[2].trim());
+                        System.out.println("                  Matrícula                         : " + campos[4].trim());
+                        System.out.println("                  Sexo                              : " + campos[5].trim());
+                        System.out.println("                  Dirección                         : " + campos[6].trim());
+                        System.out.println("                  Ciudad                            : " + campos[7].trim());
+                        System.out.println("                  Email                             : " + campos[8].trim());
+                        System.out.println("                  Nacionalidad                      : " + campos[9].trim());
+                        System.out.println("                  Vive con                          : " + campos[10].trim());
+                        System.out.println("                  Gestionado por                    : " + campos[11].trim());
+                        System.out.println("                  Etnia                             : " + campos[12].trim());
+                        System.out.println("                  Institución de origen             : " + campos[13].trim());
+                        System.out.println("                  Último curso                      : " + campos[14].trim());
+                        System.out.println("                  Repitente                         : " + campos[15].trim());
+                        System.out.println("                  Enfermedades                      : " + campos[16].trim());
+                        System.out.println("                  Medicamentos                      : " + campos[17].trim());
+                        System.out.println("                  Fecha de nacimiento               : " + campos[18].trim());
+                        System.out.println("                  Teléfono                          : " + campos[19].trim());
+                        System.out.println("                  Curso                             : " + campos[20].trim());
+                        System.out.println("                  Letra del curso                   : " + campos[21].trim());
+                        System.out.println("                  Nombres apoderado                 : " + campos[22].trim());
+                        System.out.println("                  Apellidos apoderado               : " + campos[23].trim());
+                        System.out.println("                  RUT apoderado                     : " + campos[24].trim());
+                        System.out.println("                  Parentesco apoderado              : " + campos[25].trim());
+                        System.out.println("                  Teléfono apoderado                : " + campos[26].trim());
+                        System.out.println("                  Email apoderado                   : " + campos[27].trim());
+                        System.out.println("                  Dirección apoderado               : " + campos[28].trim());
+                        System.out.println("                  Ciudad apoderado                  : " + campos[29].trim());
+                        System.out.println("                  Situación laboral apoderado       : " + campos[30].trim());
+                        System.out.println("                  Escolaridad apoderado             : " + campos[31].trim());
+                        System.out.println("                  Observaciones apoderado           : " + campos[32].trim());
+
+
+                        System.out.println("\n              ---------- MODIFICAR ALUMNO ---------- ");
+
+                        System.out.print("                    [Nuevo] Nombre                    : ");
+                        String nuevoNombre = scanner.nextLine();
+
+                        System.out.print("                    [Nuevo] Apellidos                 : ");
+                        String nuevosApellidos = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Edad                      : ");
+                        String nuevaEdad = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Rut                       : ");
+                        String nuevoRutAlumno = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Matrícula                 : ");
+                        String nuevaMatricula = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Sexo                      : ");
+                        String nuevoSexo = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Dirección                 : ");
+                        String nuevaDireccion = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Ciudad                    : ");
+                        String nuevaCiudad = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Email                     : ");
+                        String nuevoEmail = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Nacionalidad              : ");
+                        String nuevaNacionalidad = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Vive con                  : ");
+                        String nuevoViveCon = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Gestionado por            : ");
+                        String nuevoGestionadoPor = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Etnia                     : ");
+                        String nuevaEtnia = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Institución de origen     : ");
+                        String nuevaInsOrigen = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Último curso              : ");
+                        String nuevoUltCurso = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Repitente                 : ");
+                        String nuevoRepitente = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Enfermedades              : ");
+                        String nuevasEnfermedades = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Medicamentos              : ");
+                        String nuevosMedicamentos = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Fecha de nacimiento       : ");
+                        String nuevaFechaNacimiento = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Teléfono                  : ");
+                        String nuevoTelefono = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Curso                     : ");
+                        String nuevoCurso = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Letra del curso           : ");
+                        String nuevaLetraCurso = scanner.nextLine();
+
+
+                        System.out.println("              ---------- AGREGAR APODERADO ---------- ");
+
+
+                        System.out.print("                    [Nuevo] Nombres                   : ");
+                        String nuevosNombresApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Apellidos                 : ");
+                        String nuevosApellidosApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] RUT                       : ");
+                        String nuevoRutApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Parentesco                : ");
+                        String nuevoParentescoApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Teléfono                  : ");
+                        String nuevoTelefonoApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Email                     : ");
+                        String nuevoEmailApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Dirección                 : ");
+                        String nuevaDireccionApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Ciudad                    : ");
+                        String nuevaCiudadApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Situación laboral         : ");
+                        String nuevaSituacionLaboralApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Escolaridad               : ");
+                        String nuevaEscolaridadApoderado = scanner.nextLine();
+
+
+                        System.out.print("                    [Nuevo] Observaciones             : ");
+                        String nuevasObservacionesApoderado = scanner.nextLine();
+
+                        // Solicitar y actualizar otros datos...
+
+                        // Escribir los datos modificados en el archivo temporal
+                        escritor.write( nuevoNombre                     + "," + nuevosApellidos                 + "," + nuevaEdad                       + "," + nuevoRutAlumno              + "," +
+                                nuevaMatricula                  + "," + nuevoSexo                       + "," + nuevaDireccion                  + "," + nuevaCiudad                 + "," +
+                                nuevoEmail                      + "," + nuevaNacionalidad               + "," + nuevoViveCon                    + "," + nuevoGestionadoPor          + "," +
+                                nuevaEtnia                      + "," + nuevaInsOrigen                  + "," + nuevoUltCurso                   + "," + nuevoRepitente              + "," +
+                                nuevasEnfermedades              + "," + nuevosMedicamentos              + "," + nuevaFechaNacimiento            + "," + nuevoTelefono               + "," +
+                                nuevoCurso                      + "," + nuevaLetraCurso                 + "," + nuevosNombresApoderado          + "," + nuevosApellidosApoderado    + "," +
+                                nuevoRutApoderado               + "," + nuevoParentescoApoderado        + "," + nuevoTelefonoApoderado          + "," + nuevoEmailApoderado         + "," +
+                                nuevaDireccionApoderado         + "," + nuevaCiudadApoderado            + "," + nuevaSituacionLaboralApoderado  + "," + nuevaEscolaridadApoderado   + "," +
+                                nuevasObservacionesApoderado);
+
+
+
+                        System.out.println("        Alumno modificado correctamente... ");
+                    } else {
+                        // Si no es el estudiante buscado, simplemente copia la línea tal como está al archivo temporal
+                        escritor.write(linea);
+                    }
+                    escritor.newLine();
+                }
+            }
+
+            lector.close();
+            escritor.close();
+
+            archivo.delete();
+
+            File archivoTemp = new File(nombreArchivo + ".temp");
+            archivoTemp.renameTo(archivo);
+
+            if (!encontrado) {
+                System.out.println("No se encontró ningún estudiante con el RUT proporcionado.");
+            }
+
+        } catch (IOException e) {
+            System.err.println("Hubo un error al leer/actualizar el archivo: " + e.getMessage());
+        }
     }
 }
