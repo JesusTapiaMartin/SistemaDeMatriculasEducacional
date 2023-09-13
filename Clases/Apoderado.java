@@ -11,7 +11,6 @@ public class Apoderado {
     public Apoderado(   String nombres              , String apellidos          , String rut                , String parentesco     ,
                         String telefono             , String email              , String direccion          , String ciudad         ,
                         String situacionLaboral     , String escolaridad        , String observaciones) {
-
         this.nombres            = nombres;
         this.apellidos          = apellidos;
         this.rut                = rut;

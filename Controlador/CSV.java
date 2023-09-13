@@ -114,6 +114,8 @@ public class CSV {
 
 
 
+
+
     //==================== MOSTRAR ALUMNOS CSV ====================
     public static void mostrarAlumnosCSV(){
         try{
@@ -159,26 +161,29 @@ public class CSV {
     }
 
 
+
+
+
     //==================== MOSTRAR ALUMNOS POR RUT ====================
     public static void mostrarAlumnoPorRut(String rutBusqueda) {
         try {
-            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
+            BufferedReader lector       = new BufferedReader(new FileReader(nombreArchivo));
             String linea;
 
-            boolean encontrado = false;
+            boolean encontrado          = false;
 
-            while ((linea = lector.readLine()) != null) {
-                String[] campos = linea.split(",");
+            while ((linea               = lector.readLine()) != null) {
+                String[] campos         = linea.split(",");
 
-                if (campos.length >= 33) {
-                    String rutAlumno = campos[3].trim();
+                if (campos.length       >= 33) {
+                    String rutAlumno    = campos[3].trim();
 
                     // Elimina puntos y guiones del RUT para hacer la comparación
-                    rutAlumno = rutAlumno.replaceAll("[.-]", "");
+                    rutAlumno           = rutAlumno.replaceAll("[.-]", "");
 
                     // Compara los RUT sin considerar mayúsculas ni minúsculas
                     if (rutAlumno.equalsIgnoreCase(rutBusqueda)) {
-                        encontrado = true;
+                        encontrado      = true;
 
 
                         String nombresAlumno                = campos[0].trim();
@@ -313,17 +318,17 @@ public class CSV {
             while ((linea               = lector.readLine()) != null) {
                 String[] campos         = linea.split(",");
 
-                if (campos.length       >= 24) {
+                if (campos.length      >= 24) {
                     String rutAlumno    = campos[3].trim();
 
                     // Elimina puntos y guiones del RUT para hacer la comparación
-                    rutAlumno = rutAlumno.replaceAll("[.-]", "");
+                    rutAlumno           = rutAlumno.replaceAll("[.-]", "");
 
                     if (rutAlumno.equals(rutBusqueda)) {
-                        encontrado = true;
+                        encontrado      = true;
 
                         Scanner scanner = new Scanner(System.in);
-                        System.out.println("Datos actuales del alumno:");
+                        System.out.println("              ---------- DATOS ACTUALES ---------- ");
                         System.out.println("                  Nombre                            : " + campos[0].trim());
                         System.out.println("                  Apellidos                         : " + campos[1].trim());
                         System.out.println("                  Edad                              : " + campos[2].trim());
@@ -497,14 +502,14 @@ public class CSV {
 
                         // Escribir los datos modificados en el archivo temporal
                         escritor.write( nuevoNombre                     + "," + nuevosApellidos                 + "," + nuevaEdad                       + "," + nuevoRutAlumno              + "," +
-                                nuevaMatricula                  + "," + nuevoSexo                       + "," + nuevaDireccion                  + "," + nuevaCiudad                 + "," +
-                                nuevoEmail                      + "," + nuevaNacionalidad               + "," + nuevoViveCon                    + "," + nuevoGestionadoPor          + "," +
-                                nuevaEtnia                      + "," + nuevaInsOrigen                  + "," + nuevoUltCurso                   + "," + nuevoRepitente              + "," +
-                                nuevasEnfermedades              + "," + nuevosMedicamentos              + "," + nuevaFechaNacimiento            + "," + nuevoTelefono               + "," +
-                                nuevoCurso                      + "," + nuevaLetraCurso                 + "," + nuevosNombresApoderado          + "," + nuevosApellidosApoderado    + "," +
-                                nuevoRutApoderado               + "," + nuevoParentescoApoderado        + "," + nuevoTelefonoApoderado          + "," + nuevoEmailApoderado         + "," +
-                                nuevaDireccionApoderado         + "," + nuevaCiudadApoderado            + "," + nuevaSituacionLaboralApoderado  + "," + nuevaEscolaridadApoderado   + "," +
-                                nuevasObservacionesApoderado);
+                                        nuevaMatricula                  + "," + nuevoSexo                       + "," + nuevaDireccion                  + "," + nuevaCiudad                 + "," +
+                                        nuevoEmail                      + "," + nuevaNacionalidad               + "," + nuevoViveCon                    + "," + nuevoGestionadoPor          + "," +
+                                        nuevaEtnia                      + "," + nuevaInsOrigen                  + "," + nuevoUltCurso                   + "," + nuevoRepitente              + "," +
+                                        nuevasEnfermedades              + "," + nuevosMedicamentos              + "," + nuevaFechaNacimiento            + "," + nuevoTelefono               + "," +
+                                        nuevoCurso                      + "," + nuevaLetraCurso                 + "," + nuevosNombresApoderado          + "," + nuevosApellidosApoderado    + "," +
+                                        nuevoRutApoderado               + "," + nuevoParentescoApoderado        + "," + nuevoTelefonoApoderado          + "," + nuevoEmailApoderado         + "," +
+                                        nuevaDireccionApoderado         + "," + nuevaCiudadApoderado            + "," + nuevaSituacionLaboralApoderado  + "," + nuevaEscolaridadApoderado   + "," +
+                                        nuevasObservacionesApoderado);
 
 
 
@@ -512,6 +517,7 @@ public class CSV {
                     } else {
                         // Si no es el estudiante buscado, simplemente copia la línea tal como está al archivo temporal
                         escritor.write(linea);
+
                     }
                     escritor.newLine();
                 }
