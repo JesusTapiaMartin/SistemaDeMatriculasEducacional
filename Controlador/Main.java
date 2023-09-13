@@ -181,7 +181,8 @@ public class Main {
     }
 
     public static void perfilInstitucion() {
-        System.out.println("              ---------- Perfil de la Institucion ---------- ");
+        System.out.println("                                                                                ");
+        System.out.println("              ---------- Perfil de la Institucion ----------                    ");
         System.out.println("                    Nombre          : Complejo Educacional La Granja de Cajón   ");
         System.out.println("                    Dirección       : ARTURO PRAT Nº 0181                       ");
         System.out.println("                    Director        : Manuel Valdés                             ");

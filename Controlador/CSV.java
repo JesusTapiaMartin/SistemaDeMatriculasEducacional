@@ -175,8 +175,8 @@ public class CSV {
             while ((linea               = lector.readLine()) != null) {
                 String[] campos         = linea.split(",");
 
-                if (campos.length       >= 33) {
-                    String rutAlumno    = campos[3].trim();
+                if (campos.length       >= 32) {
+                    String rutAlumno    = campos[2].trim();
 
                     // Elimina puntos y guiones del RUT para hacer la comparación
                     rutAlumno           = rutAlumno.replaceAll("[.-]", "");
@@ -188,7 +188,7 @@ public class CSV {
 
                         String nombresAlumno                = campos[0].trim();
                         String apellidosAlumno              = campos[1].trim();
-                        String edadAlumno                   = campos[2].trim();
+                        String edadAlumno                   = campos[3].trim();
                         String matriculaAlumno              = campos[4].trim();
                         String sexoAlumno                   = campos[5].trim();
                         String direccionAlumno              = campos[6].trim();
@@ -271,6 +271,10 @@ public class CSV {
     }
 
 
+
+
+
+
     //==================== ELIMINAR ALUMNO CSV ====================
     public static void eliminarAlumnoCSV(String rutEstudiante){
         try{
@@ -303,6 +307,10 @@ public class CSV {
         }
 
     }
+
+
+
+
 
     //==================== MODIFICAR ALUMNO POR RUT ====================
     public static void modificarAlumnoPorRut(String rutBusqueda) {
