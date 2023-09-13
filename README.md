@@ -1,9 +1,9 @@
 # S.M.E
 SISTEMA DE MATRÍCULAS EDUCACIONAL
 
-Integrantes : Benjamin Fernández
-              Jesús Tapia
-              Yoandri Villarroel
+Integrantes : Benjamin Fernández -
+              Jesús Tapia -
+              Yoandri Villarroel -
             
             
 Link boceto interfaz gráfica
