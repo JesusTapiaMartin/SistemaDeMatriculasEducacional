@@ -1,5 +1,5 @@
 # S.M.E
-SISTEMA DE MATRÍCULAS EDUCACIONAL
+==========SISTEMA DE MATRÍCULAS EDUCACIONAL==========
 
 Integrantes : Benjamin Fernández -
               Jesús Tapia -
