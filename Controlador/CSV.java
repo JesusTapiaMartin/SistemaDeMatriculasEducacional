@@ -20,6 +20,9 @@ public class CSV {
 
             //  ---------- SI EL ARCHIVO NO EXISTE ----------
             if (!archivo.exists()){
+                // Objeto BufferedWriter llamado "escritor", que se utiliza para escribir en el archivo.
+                // Parámetro FileWriter para abrir el archivo en modo escritura.
+
                 BufferedWriter escritor = new BufferedWriter(new FileWriter(nombreArchivo));
 
                     // Encabezados del CSV
@@ -83,7 +86,7 @@ public class CSV {
 
 
             //              ---------- AGREGAR ----------}
-                // Para agregar datos al final del archivo, en vez de sobreescribirlo
+                // Para agregar datos al final del archivo existente en modo append (sin sobrescribir el archivo)
             BufferedWriter escritor = new BufferedWriter(new FileWriter(nombreArchivo, true));
 
                 // Para escribir los datos del alumno y su apoderado
@@ -127,12 +130,13 @@ public class CSV {
             boolean primeraLinea    = true;
 
             while((linea = lector.readLine()) != null){
-                // Esto es para saltar la prímera línea de encabezados, ya que estos van de más
+                // Para detectar y omitir la primera línea del archivo que contiene los encabezados
                 if(primeraLinea){
                     primeraLinea = false;
                     continue;
                 }
 
+                // Sedivide la línea actual en campos utilizando una coma como separador
                 String[] campos = linea.split(",");
 
                 if (campos.length >= 32){
