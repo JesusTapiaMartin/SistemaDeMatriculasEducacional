@@ -15,10 +15,10 @@ class MainTest {
     @Test
     void testAgregarAlumnoCSV() {
         Alumno nuevoAlumno = new Alumno(
-                "Juan"      , "Pérez"               , "18"          , "12345678-9"  , "2023001"         , "Masculino"       , "Calle 123"   ,
-                "Ciudad A"  , "juan@example.com"    , "Chileno"     , "Padres"      , "Etnia X"         , "Colegio A"       ,
-                "8"         , "No"                  , "Ninguna"     , "Ninguno"     , "01/01/2005"      , "+56912345678"    ,
-                "Primero"   , "A"                   , "A"
+                "Juan"              , "Pérez"               , "18"              , "12345678-9"          , "214767325"       , 21476732522       ,
+                "Masculino"         , "Calle 123"           , "Ciudad A"        , "juan.perez@gmail.com", "Chileno"         , "Padres"          ,
+                "Ninguna"           , "Colegio A"           , "8vo"             , "No"                  , "Ninguna"         , "Ninguno"         ,
+                "01012005"          , "+56912345678"        , "Primero"         , "A"
         );
 
         CSV.agregarAlumnoCSV(nuevoAlumno);
